@@ -1,0 +1,26 @@
+import os
+import re
+
+def listfiles(dir):
+        f=[]
+	ret=[]
+        for dirr,dnames,fnames in os.walk(dir):
+                #f=f+os.path.join(dirr, fnames)
+                #print os.path.join(dirr, fnames)
+                dirr=dirr.strip("/")
+                for name in fnames:
+			ret.append(os.path.join(dirr, name))
+                        #print os.path.join(dirr, name)
+	return ret
+def freq():
+	list=listfiles("home/lakshmi/projects/python")
+	f={}
+	for n in list:
+		s=n.split('.')
+		print s
+		f[s[1]]=f.get(s[1],0)+1
+	print f
+	
+
+
+freq()  

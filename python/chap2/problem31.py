@@ -1,3 +1,3 @@
-def parse(filename,i,j):
-	print [x[:-1].split('!') for x in open(filename).readlines() if x[0]!='#']
-parse('a.txt','!','#')
+def parse(file,s,j):
+	print [x[:-1].split(s) for x in open(file).readlines() if x[0]!=j]
+parse('aa.txt','!','#')
