@@ -1,15 +1,16 @@
 import os
-def numlines(x):
+
+def linesnum(x):
         l=0
-        for path,y,z in os.walk(os.getcwd()):
-                for i in z:
-                        if x in i:
-				il=0
-				for f in open(i):
-					if f[0] not in ['#','\n']:
-						#print f[0],1
+        for path,dirr,files in os.walk(os.getcwd()):
+                for a in files:
+                        if x in a:
+				n=0
+				for b in open(a):
+					if b[0] not in ['#','\n']:
 						l+=1
-						il+=1
-				print os.path.join(path,i),":-",il
-        print "Total:- ",l
-numlines(".py")
+						n+=1
+				print os.path.join(path,a),": ",n
+  
+
+linesnum(".py")

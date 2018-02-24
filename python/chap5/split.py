@@ -11,5 +11,5 @@ def split(f,n):
 			g.write(x)
 			i+=1
 	except IOError:
-                print "No Such File"
+                print "No File"
 split("f1",3) 
