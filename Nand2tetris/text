@@ -1,0 +1,51 @@
+
+
+
+
+
+
+  
+
+			HACK LANGUAGE SPECIFICATION
+
+		* Hack language instruction set
+   			- Just two types of instructions
+                           > A instruction
+                           > C instruction
+
+		A instruction: @value 
+                    - value is either a non negative decimal constant
+                    - or a symbol referring to such a constant
+                    eg: @21
+                C instruction: dest=comp;jump
+                    - binary syntax : 111a c1c2c3c4c5c6 d1d2d3 j1j2j3
+                    eg: D=D-M;JMP
+                       
+
+              >>>Predefined Symbols
+              
+             symbol -> value
+                 R0 -> 0
+                 R1 -> 1
+                   .
+                   .
+                   .
+                 R15 -> 15
+                 SCREEN -> 16384
+                 KBD -> 24576
+                 SP -> 0
+                 LCL ->1
+                 ARG -> 2
+                 THIS -> 3
+                 THAT -> 4
+
+			Label declaration : (label)
+                                labels point to the instruction the comes after it.
+                        Variable Declaration : @VariableName
+
+
+
+
+
+
+
